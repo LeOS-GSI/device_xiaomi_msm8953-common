@@ -87,7 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
  debug.egl.hw=0 \
  debug.enable.sglscale=1 \
- debug.gralloc.enable_fb_ubwc=1 \
+ vendor.gralloc.enable_fb_ubwc=1 \
  debug.mdpcomp.logs=0 \
  debug.sf.hw=0 \
  dev.pm.dyn_samplingrate=1 \
@@ -155,7 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
- ro.use_data_netmgrd=true \
+ ro.vendor.use_data_netmgrd=true \
  persist.data.netmgrd.qos.enable=true \
  persist.data.mode=concurrent
 
@@ -198,10 +198,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
  ro.telephony.default_network=22,20 \
  service.qti.ims.enabled=1 \
  telephony.lteOnCdmaDevice=1
+ ro.vendor.build.vendorprefix=/vendor
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
- persist.timed.enable=true
+ persist.vendor.delta.time.enable=true
 
 # Telephony
 Add persist.vendor.qti.pie.telephony=1
@@ -216,9 +217,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.VT_ENABLE=1 \
-    persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.dbg.wfc_avail_ovr=1
+    persist.radio.VT_ENABLE=2 \
+    persist.radio.VT_HYBRID_ENABLE=2 \
+    persist.dbg.wfc_avail_ovr=2
 
 # DPM
 #PRODUCT_PROPERTY_OVERRIDES += \
