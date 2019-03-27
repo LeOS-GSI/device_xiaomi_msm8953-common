@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
+#    android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
 # Input
@@ -245,7 +245,7 @@ PRODUCT_COPY_FILES += \
 
 # IPA Manager
 PRODUCT_PACKAGES += \
-    ipacm \
+#    ipacm \
     IPACM_cfg.xml
 
 # ConsumerIr
@@ -303,10 +303,17 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OMNI Charger Images
+PRODUCT_PACKAGES += \
+    omni_charger_res_images \
+    animation.txt \
+    font_charger.png
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service
+    android.hardware.power@1.0-service \
+    power.msm8953
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml

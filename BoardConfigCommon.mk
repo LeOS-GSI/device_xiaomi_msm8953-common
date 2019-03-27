@@ -74,7 +74,7 @@ AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_XML_AUDIO_POLICY_CONF := 1
-USE_CUSTOM_AUDIO_POLICY := 1
+#USE_CUSTOM_AUDIO_POLICY := 1
 USE_LEGACY_LOCAL_AUDIO_HAL := true
 
 # Bootloader
@@ -107,6 +107,7 @@ ENABLE_CPUSETS := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -119,6 +120,7 @@ endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Display
+BOARD_USES_ADRENO := true
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
@@ -225,8 +227,8 @@ endif
 
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 BOARD_SEPOLICY_VERS := 28.0
 
