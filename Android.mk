@@ -21,6 +21,9 @@ ifneq ($(filter mido tissot oxygen,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libinit_msm8953
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := init_msm8953.cpp
 
 LOCAL_MODULE := wifi_symlinks
 LOCAL_MODULE_TAGS := optional
